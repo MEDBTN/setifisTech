@@ -15,16 +15,15 @@
       <li class="nav-item"><a (click)="scrollTo('about')" class="nav-link me-lg-3">About </a></li>
       <li class="nav-item"><a (click)="scrollTo('values')" class="nav-link me-lg-3">Services</a></li>
       <li class="nav-item"><a (click)="scrollTo('projects')" class="nav-link me-lg-3">Projects</a></li>
-      <!-- <li class="nav-item"><a (click)="scrollTo('')" class="nav-link me-lg-3">Team</a></li> -->
       <li class="nav-item"><a (click)="scrollTo('footer')" class="nav-link me-lg-3">Contact</a></li>
     </ul>
     <!-- CTA buttons -->
-    <button class="call-us scrollto d-inline-flex align-items-center border-0 d-none d-lg-flex" href="#!">
+    <button class="call-us scrollto d-inline-flex align-items-center border-0 d-none d-lg-flex"
+      (click)="scrollTo('footer')">
       <span class="p-2">Call us</span>
     </button>
   </div>
 </nav>
-
 
 <main>
   <!-- Hero Section -->
@@ -236,7 +235,6 @@
   </div>
 
 </main>
-
 
 <!-- ======= Footer ======= -->
 <footer id="footer" class="footer">
