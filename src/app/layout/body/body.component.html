@@ -1,11 +1,37 @@
-<main>
-  <!-- <router-outlet></router-outlet> -->
+<nav class="navbar navbar-expand-lg fixed-top bg-glass px-3 mx-lg-4" id="mainNav">
+  <a class="navbar-brand fw-bold" href="#page-top">
+    <img src="assets/images/setifis_logo.png" alt="" width="40" height="40"
+      class="d-inline-block align-text-center me-2" />
+    <span>Setifis Tech</span>
 
+  </a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" (click)="toggleNavbar()">
+    <i class="bi-list"></i>
+  </button>
+  <div class="collapse navbar-collapse" [ngClass]="{'show': !isNavbarCollapsed}" id="navbarResponsive">
+    <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
+      <li class="nav-item"><a (click)="scrollTo('hero')" class="nav-link me-lg-3">Home</a></li>
+      <li class="nav-item"><a (click)="scrollTo('about')" class="nav-link me-lg-3">About </a></li>
+      <li class="nav-item"><a (click)="scrollTo('values')" class="nav-link me-lg-3">Services</a></li>
+      <li class="nav-item"><a (click)="scrollTo('projects')" class="nav-link me-lg-3">Projects</a></li>
+      <!-- <li class="nav-item"><a (click)="scrollTo('')" class="nav-link me-lg-3">Team</a></li> -->
+      <li class="nav-item"><a (click)="scrollTo('footer')" class="nav-link me-lg-3">Contact</a></li>
+    </ul>
+    <!-- CTA buttons -->
+    <button class="call-us scrollto d-inline-flex align-items-center border-0 d-none d-lg-flex" href="#!">
+      <span class="p-2">Call us</span>
+    </button>
+  </div>
+</nav>
+
+
+<main>
   <!-- Hero Section -->
   <div class="container-lg container-fluid-md">
-    <section class="hero" id="hero">
+    <section class="hero" id="hero" data-aos="fade-up">
       <div class="row align-items-center justify-content-center">
-        <div class="col-lg-7 p-3">
+        <div class="col-lg-7 p-3" data-aos="zoom-out" data-aos-delay="400">
           <!-- Hero content -->
           <div class="mb-3 mb-lg-0 mx-3 ms-lg-5 text-center text-md-start">
             <h1 class="display-5 mb-3">Your Trusted Partner in Digital Transformation</h1>
@@ -15,7 +41,7 @@
             </p>
             <!-- CTA buttons -->
             <div class="d-flex justify-content-center justify-content-md-start">
-              <button class="cta-btn scrollto d-inline-flex align-items-center border-0" href="#!">
+              <button class="cta-btn scrollto d-inline-flex align-items-center border-0" (click)="getStarted('about')">
                 <span>Get Started</span>
                 <i class="bi bi-arrow-right"></i>
               </button>
@@ -23,7 +49,7 @@
           </div>
         </div>
         <!-- Hero image -->
-        <div class="col-lg-5">
+        <div class="col-lg-5" data-aos="zoom-in" data-aos-delay="400">
           <div class="hero-image">
             <img src="assets/images//hero-imag.png" alt="">
           </div>
@@ -36,10 +62,9 @@
 
   <!-- ======= About Section ======= -->
   <div id="about" class="about">
-
     <div class="container p-3" data-aos="fade-up">
       <div class="row gx-0">
-        <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
+        <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="400">
           <div class="content">
             <h3>Who We Are</h3>
             <h2>Meet Our Dynamic Trio: Crafting Exquisite UI/UX Web & Mobile Apps</h2>
@@ -64,7 +89,7 @@
         </div>
 
         <div class="col-lg-6 d-flex align-items-center justify-content-center mb-3" data-aos="zoom-out"
-          data-aos-delay="200">
+          data-aos-delay="400">
           <img src="assets/images/about-us.png" class="img-fluid" alt="">
         </div>
 
@@ -76,7 +101,7 @@
   <!-- ======= Values Section ======= -->
   <div id="values" class="values">
 
-    <div class="container mt-5" data-aos="fade-up">
+    <div class="container my-3" data-aos="fade-up">
 
       <header class="section-header">
         <h2>WHAT WE DO </h2>
@@ -133,14 +158,14 @@
 
   </div><!-- End Values Section -->
 
-  <div class="container my-5" data-aos="fade-up">
+  <div id="projects" class="container my-3">
 
-    <header class="section-header">
+    <header class="section-header" data-aos="fade-up">
       <h2>PORTFOLIO </h2>
       <p>Our Projects </p>
     </header>
     <div class="d-flex flex-wrap gap-3 justify-content-center">
-      <div class="position-relative">
+      <div class="position-relative" data-aos="fade-right" data-aos-delay="500">
         <div class="project-card">
           <div class="image">
             <img src="assets/images/projects/mobile/adh/adh1.jpg" />
@@ -163,7 +188,7 @@
           </div>
         </div>
       </div>
-      <div class="position-relative">
+      <div class="position-relative" data-aos="fade-left" data-aos-delay="500">
         <div class="project-card">
           <div class="image">
             <img src="assets/images/projects/mobile/animo/animo1.jpg" />
@@ -185,7 +210,7 @@
           </div>
         </div>
       </div>
-      <div class="position-relative">
+      <div class="position-relative" data-aos="fade-right" data-aos-delay="500">
         <div class="project-card">
           <div class="image">
             <img src="assets/images/projects/mobile/sharikcare/sharikcar1.jpg" />
@@ -210,6 +235,74 @@
     </div>
   </div>
 
-
-
 </main>
+
+
+<!-- ======= Footer ======= -->
+<footer id="footer" class="footer">
+
+  <div class="footer-top">
+    <div class="container">
+      <div class="row gy-4" data-aos="zoom-out" data-aos-delay="400">
+        <div class="col-lg-5 col-md-12 footer-info">
+          <div href="index.html" class="logo d-flex align-items-center">
+            <img src="assets/images/setifis_logo.png" alt="">
+            <span>Sétifis Tech</span>
+          </div>
+          <!-- <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies
+            darta donna mare fermentum iaculis eu non diam phasellus.</p> -->
+          <div class="social-links mt-3 ms-5">
+            <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Services</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Privacy policy</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Web Design</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Web Development</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Product Management</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Marketing</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Graphic Design</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+          <h4>Contact Us</h4>
+          <p>
+            209 city <br>
+            Setif, Ain-Arnet<br>
+            Algeria <br><br>
+            <strong>Phone:</strong> 05.62.41.39.35<br>
+            <strong>Email:</strong> setifistech@gmail.com<br>
+          </p>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container" data-aos="zoom-in" data-aos-delay="400">
+    <div class="copyright">
+      &copy; Copyright <strong><span>Sétifis Tech</span></strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+      Designed by <a href="#">Setifis Tech</a>
+    </div>
+  </div>
+</footer><!-- End Footer -->

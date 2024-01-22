@@ -1,3 +1,73 @@
+
+// navBar Toggler
+.navbar-toggler{
+  background-color: #424975;
+  color: aliceblue;
+}
+.navbar-toggler:hover{
+  opacity: 95%;
+}
+
+// call us
+.call-us{
+  line-height: 0;
+  padding: 10px 20px;
+  border-radius: 4px;
+  transition: 0.5s;
+  color: #fff;
+  background: #8d56ff;
+  box-shadow: 0px 5px 25px rgba(65, 84, 241, 0.3);
+}
+.call-us:hover{
+  box-shadow: 0px 5px 25px rgba(65, 84, 241, 0.3);
+}
+
+.navbar {
+  padding: 0;
+}
+
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.navbar li {
+  position: relative;
+}
+
+.navbar a,
+.navbar a:focus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0 10px 30px;
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #013289;
+  white-space: nowrap;
+  transition: 0.3s;
+}
+
+.navbar a i,
+.navbar a:focus i {
+  font-size: 12px;
+  line-height: 0;
+  margin-left: 5px;
+}
+
+.navbar a:hover,
+.navbar .active,
+.navbar .active:focus,
+.navbar li:hover>a {
+  color: #4154f1;
+}
+
+// ////////////////////////////////////////////////
+
 .hero .hero-image {
   display: flex;
   align-items: center;
@@ -76,10 +146,9 @@
 }
 
 .values .box img {
-  width: 300px;
-  height: 300px;
-
-  padding: 30px 50px;
+  width: 200px;
+  height: 200px;
+  padding: 8px 8px;
   transition: 0.5s;
   transform: scale(1.1);
 }
@@ -163,24 +232,6 @@
 .project-card .details .link:hover {
 cursor: pointer;
 }
-// .project-card .details .center ul li {
-//   list-style: none;
-//   margin: 0 5px;
-//   float: left;
-// }
-// .project-card .details .center ul li a {
-//   display: block;
-//   background: #262626;
-//   color: #fff;
-//   width: 30px;
-//   height: 30px;
-//   line-height: 30px;
-//   text-align: center;
-//   transform: .5s;
-// }
-// .project-card .details .center ul li a:hover {
-//   background: #ff3636;
-// }
 
 .project-card .project-footer{
   position: absolute;
@@ -193,3 +244,139 @@ cursor: pointer;
 .project-card .project-footer h5 {
   color: #012970;
 }
+
+
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+.footer {
+  background: rgba(255, 255, 255, 0.63);
+  backdrop-filter: blur(10.3px);
+  -webkit-backdrop-filter: blur(10.3px);
+  padding: 0 0 30px 0;
+  font-size: 14px;
+}
+
+.footer .footer-top {
+  // background: white url(../img/footer-bg.png) no-repeat right top;
+  background-size: contain;
+  border-top: 1px solid #e1ecff;
+  border-bottom: 1px solid #e1ecff;
+  padding: 60px 0 30px 0;
+}
+
+@media (max-width: 992px) {
+  .footer .footer-top {
+    background-position: center bottom;
+  }
+}
+
+.footer .footer-top .footer-info {
+  margin-bottom: 30px;
+}
+
+.footer .footer-top .footer-info .logo {
+  line-height: 0;
+  margin-bottom: 15px;
+}
+
+.footer .footer-top .footer-info .logo img {
+  max-height: 40px;
+  margin-right: 6px;
+}
+
+.footer .footer-top .footer-info .logo span {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #434974;
+  font-family: "Nunito", sans-serif;
+  margin-top: 3px;
+  text-decoration: none;
+}
+
+.footer .footer-top .footer-info p {
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 0;
+  font-family: "Nunito", sans-serif;
+}
+
+.footer .footer-top .social-links a {
+  font-size: 20px;
+  display: inline-block;
+  color: rgba(1, 41, 112, 0.5);
+  line-height: 0;
+  margin-right: 20px;
+  transition: 0.3s;
+}
+
+.footer .footer-top .social-links a:hover {
+  color: #434974;
+}
+
+.footer .footer-top h4 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #434974;
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.footer .footer-top .footer-links {
+  margin-bottom: 30px;
+}
+
+.footer .footer-top .footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer .footer-top .footer-links ul i {
+  padding-right: 2px;
+  color: #d0d4fc;
+  font-size: 12px;
+  line-height: 0;
+}
+
+.footer .footer-top .footer-links ul li {
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+.footer .footer-top .footer-links ul li:first-child {
+  padding-top: 0;
+}
+
+.footer .footer-top .footer-links ul a {
+  color: #013289;
+  transition: 0.3s;
+  display: inline-block;
+  line-height: 1;
+}
+
+.footer .footer-top .footer-links ul a:hover {
+  color: #4154f1;
+}
+
+.footer .footer-top .footer-contact p {
+  line-height: 26px;
+}
+
+.footer .copyright {
+  text-align: center;
+  padding-top: 30px;
+  color: #434974;
+}
+
+.footer .credits {
+  padding-top: 10px;
+  text-align: center;
+  font-size: 13px;
+  color: #434974;
+}
+
